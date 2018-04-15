@@ -25,6 +25,18 @@ $client->authenticate($token);
 $client->servers->all();
 ```
 
+## Available clients
+
+### Actions
+
+```php
+// retrieve all actions
+$actions = $client->actions->all();
+
+// get one action
+$action = $client->actions->show($actionId);
+```
+
 ## Usage with Symfony
 
 This library uses the [httpplug](http://httplug.io/) client library. The project provides a [Symfony bundle](http://docs.php-http.org/en/latest/integrations/symfony-bundle.html).

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace CedricZiel\HetznerCloudAPI\Api;
 
-class Action extends AbstractApi
+class Actions extends AbstractApi
 {
     public const STATUS_RUNNING = 'running';
     public const STATUS_SUCCESS = 'success';

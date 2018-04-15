@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CedricZiel\HetznerCloudAPI;
 
 use CedricZiel\HetznerCloudAPI\Api\AbstractApi;
+use CedricZiel\HetznerCloudAPI\Api\Actions;
 use CedricZiel\HetznerCloudAPI\Api\DataCenters;
 use CedricZiel\HetznerCloudAPI\Api\Servers;
 use CedricZiel\HetznerCloudAPI\Api\ServerTypes;
@@ -20,6 +21,7 @@ use Http\Client\HttpClient;
 use Http\Discovery\UriFactoryDiscovery;
 
 /**
+ * @property-read Actions $actions
  * @property-read DataCenters $data_centers
  * @property-read Servers $servers
  * @property-read ServerTypes $server_types
@@ -133,6 +135,8 @@ class Client
     public function api(string $api): AbstractApi
     {
         switch ($api) {
+            case 'actions':
+                return new Actions($this);
             case 'data_centers':
                 return new DataCenters($this);
             case 'servers':
