@@ -29,12 +29,30 @@ $client->servers->all();
 
 ### Actions
 
+> Actions show the results and progress of asynchronous requests to the API.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-actions)
+
 ```php
 // retrieve all actions
 $actions = $client->actions->all();
 
 // get one action
 $action = $client->actions->show($actionId);
+```
+
+### Images
+
+> Images are blueprints for your VM disks.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-images)
+
+```php
+// retrieve all images
+$actions = $client->images->all();
+
+// get one image
+$action = $client->images->show($imageId);
 ```
 
 ## Usage with Symfony
