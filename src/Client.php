@@ -8,6 +8,7 @@ use CedricZiel\HetznerCloudAPI\Api\AbstractApi;
 use CedricZiel\HetznerCloudAPI\Api\Actions;
 use CedricZiel\HetznerCloudAPI\Api\DataCenters;
 use CedricZiel\HetznerCloudAPI\Api\Images;
+use CedricZiel\HetznerCloudAPI\Api\Pricing;
 use CedricZiel\HetznerCloudAPI\Api\ServerActions;
 use CedricZiel\HetznerCloudAPI\Api\Servers;
 use CedricZiel\HetznerCloudAPI\Api\ServerTypes;
@@ -23,12 +24,13 @@ use Http\Client\HttpClient;
 use Http\Discovery\UriFactoryDiscovery;
 
 /**
- * @property-read Actions $actions
- * @property-read DataCenters $data_centers
- * @property-read Images $images
- * @property-read Servers $servers
- * @property-read ServerActions $server_actions
- * @property-read ServerTypes $server_types
+ * @property Actions       $actions
+ * @property DataCenters   $data_centers
+ * @property Images        $images
+ * @property Pricing       $pricing
+ * @property Servers       $servers
+ * @property ServerActions $server_actions
+ * @property ServerTypes   $server_types
  */
 class Client
 {
@@ -145,6 +147,8 @@ class Client
                 return new DataCenters($this);
             case 'images':
                 return new Images($this);
+            case 'pricing':
+                return new Pricing($this);
             case 'servers':
                 return new Servers($this);
             case 'server_actions':

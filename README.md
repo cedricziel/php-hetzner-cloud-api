@@ -55,6 +55,18 @@ $images = $client->images->all();
 $image = $client->images->show($imageId);
 ```
 
+### Pricing
+
+> Returns prices for all resources available on the platform. VAT and currency of the project owner are used for calculations.
+>  
+> Both net and gross prices are included in the response.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-pricing-get)
+
+```php
+// retrieve all prices
+$prices = $client->pricing->all();
+```
 
 ### Servers
 
