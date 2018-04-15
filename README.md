@@ -55,6 +55,30 @@ $images = $client->images->all();
 $image = $client->images->show($imageId);
 ```
 
+
+### Servers
+
+> Servers are virtual machines that can be provisioned.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-servers)
+
+```php
+// retrieve all servers
+$server = $client->servers->all();
+
+// get one server
+$server = $client->servers->show($serverId);
+
+// create a server
+$server = $client->servers->create($parameters);
+
+// rename a server
+$server = $client->servers->rename($serverId, $newName);
+
+// remove a server
+$client->servers->remove($serverId);
+```
+
 ### ServerActions
 
 Apply actions to your servers and retrieve progress/status messages.
