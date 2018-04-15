@@ -49,10 +49,10 @@ $action = $client->actions->show($actionId);
 
 ```php
 // retrieve all images
-$actions = $client->images->all();
+$images = $client->images->all();
 
 // get one image
-$action = $client->images->show($imageId);
+$image = $client->images->show($imageId);
 ```
 
 ## Usage with Symfony
