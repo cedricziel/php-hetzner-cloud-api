@@ -55,6 +55,77 @@ $images = $client->images->all();
 $image = $client->images->show($imageId);
 ```
 
+### ServerActions
+
+Apply actions to your servers and retrieve progress/status messages.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-server-actions)
+
+```php
+// retrieve all server actions
+$actions = $client->server_actions->all();
+
+// get one server action
+$action = $client->server_actions->show($actionId);
+
+// powerOn
+$action = $client->server_actions->powerOn($serverId);
+
+// reboot
+$action = $client->server_actions->reboot($serverId);
+
+// reset
+$action = $client->server_actions->reset($serverId);
+
+// powerOn
+$action = $client->server_actions->powerOn($serverId);
+
+// shutdown
+$action = $client->server_actions->shutdown($serverId);
+
+// powerOff
+$action = $client->server_actions->powerOff($serverId);
+
+// resetPassword
+$action = $client->server_actions->resetPassword($serverId);
+
+// enableRescueMode
+$action = $client->server_actions->enableRescueMode($serverId);
+
+// disableRescueMode
+$action = $client->server_actions->disableRescueMode($serverId);
+
+// createImage
+$action = $client->server_actions->createImage($serverId, $parameters);
+
+// rebuild
+$action = $client->server_actions->rebuild($serverId, $parameters);
+
+// changeType
+$action = $client->server_actions->changeType($serverId, $parameters);
+
+// enableBackup
+$action = $client->server_actions->enableBackup($serverId, $parameters);
+
+// disableBackup
+$action = $client->server_actions->disableBackup($serverId);
+
+// attachIso
+$action = $client->server_actions->attachIso($serverId, $parameters);
+
+// detachIso
+$action = $client->server_actions->detachIso($serverId);
+
+// changeDnsPtr
+$action = $client->server_actions->changeDnsPtr($serverId, $parameters);
+
+// changeProtection
+$action = $client->server_actions->detachIso($serverId, $parameters);
+
+// requestConsole
+$action = $client->server_actions->requestConsole($serverId);
+```
+
 ## Usage with Symfony
 
 This library uses the [httpplug](http://httplug.io/) client library. The project provides a [Symfony bundle](http://docs.php-http.org/en/latest/integrations/symfony-bundle.html).

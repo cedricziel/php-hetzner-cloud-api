@@ -8,6 +8,7 @@ use CedricZiel\HetznerCloudAPI\Api\AbstractApi;
 use CedricZiel\HetznerCloudAPI\Api\Actions;
 use CedricZiel\HetznerCloudAPI\Api\DataCenters;
 use CedricZiel\HetznerCloudAPI\Api\Images;
+use CedricZiel\HetznerCloudAPI\Api\ServerActions;
 use CedricZiel\HetznerCloudAPI\Api\Servers;
 use CedricZiel\HetznerCloudAPI\Api\ServerTypes;
 use CedricZiel\HetznerCloudAPI\HttpClient\Builder;
@@ -26,6 +27,7 @@ use Http\Discovery\UriFactoryDiscovery;
  * @property-read DataCenters $data_centers
  * @property-read Images $images
  * @property-read Servers $servers
+ * @property-read ServerActions $server_actions
  * @property-read ServerTypes $server_types
  */
 class Client
@@ -145,6 +147,8 @@ class Client
                 return new Images($this);
             case 'servers':
                 return new Servers($this);
+            case 'server_actions':
+                return new ServerActions($this);
             case 'server_types':
                 return new ServerTypes($this);
         }
