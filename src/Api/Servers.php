@@ -67,7 +67,7 @@ class Servers extends AbstractApi
 
         $resolver
             ->setDefined('ssh_keys')
-            ->setAllowedTypes('user_data', 'array')
+            ->setAllowedTypes('ssh_keys', 'array')
         ;
 
         $resolver
