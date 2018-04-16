@@ -215,7 +215,11 @@ CedricZiel\HetznerCloudAPI\Api\ServerTypes:
     arguments:
       - 'server_types'
 
-``` 
+```
+
+## Credits
+
+The project is **heavily** inspired by the [Gitlab PHP API Client](https://github.com/m4tthumphrey/php-gitlab-api) by @m4tthumphrey.
 
 ## License
 
