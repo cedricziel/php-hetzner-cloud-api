@@ -23,13 +23,13 @@ class SSHKeys extends AbstractApi
         $resolver
             ->setDefined('name')
             ->setAllowedTypes('name', 'string')
-            ->setRequired(true)
+            ->setRequired('name')
         ;
 
         $resolver
             ->setDefined('public_key')
             ->setAllowedTypes('public_key', 'string')
-            ->setRequired(true)
+            ->setRequired('public_key')
         ;
 
         return $this->post('ssh_keys', $resolver->resolve($parameters));

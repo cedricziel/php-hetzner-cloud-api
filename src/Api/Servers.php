@@ -35,13 +35,13 @@ class Servers extends AbstractApi
         $resolver
             ->setDefined('name')
             ->setAllowedTypes('name', 'string')
-            ->setRequired(true)
+            ->setRequired('name')
         ;
 
         $resolver
             ->setDefined('server_type')
             ->setAllowedTypes('server_type', 'string')
-            ->setRequired(true)
+            ->setRequired('server_type')
         ;
 
         $resolver
@@ -62,7 +62,7 @@ class Servers extends AbstractApi
         $resolver
             ->setDefined('image')
             ->setAllowedTypes('image', 'string')
-            ->setRequired(true)
+            ->setRequired('image')
         ;
 
         $resolver
