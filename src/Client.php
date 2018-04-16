@@ -12,6 +12,7 @@ use CedricZiel\HetznerCloudAPI\Api\Pricing;
 use CedricZiel\HetznerCloudAPI\Api\ServerActions;
 use CedricZiel\HetznerCloudAPI\Api\Servers;
 use CedricZiel\HetznerCloudAPI\Api\ServerTypes;
+use CedricZiel\HetznerCloudAPI\Api\SSHKeys;
 use CedricZiel\HetznerCloudAPI\HttpClient\Builder;
 use CedricZiel\HetznerCloudAPI\HttpClient\Plugin\ApiVersion;
 use CedricZiel\HetznerCloudAPI\HttpClient\Plugin\Authentication;
@@ -31,6 +32,7 @@ use Http\Discovery\UriFactoryDiscovery;
  * @property Servers       $servers
  * @property ServerActions $server_actions
  * @property ServerTypes   $server_types
+ * @property SSHKeys       $ssh_keys
  */
 class Client
 {
@@ -155,6 +157,8 @@ class Client
                 return new ServerActions($this);
             case 'server_types':
                 return new ServerTypes($this);
+            case 'ssh_keys':
+                return new SSHKeys($this);
         }
 
         throw new \InvalidArgumentException(sprintf('No API %s available', $api));

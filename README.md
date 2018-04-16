@@ -162,6 +162,29 @@ $action = $client->server_actions->detachIso($serverId, $parameters);
 $action = $client->server_actions->requestConsole($serverId);
 ```
 
+### SSH Keys
+
+> SSH keys are public keys you provide to the cloud system.
+
+[Source (HCloud API Documentation)](https://docs.hetzner.cloud/#resources-ssh-keys)
+
+```php
+// retrieve all SSH Keys
+$keys = $client->ssh_keys->all();
+
+// get one SSH Key
+$key = $client->ssh_keys->show($keyId);
+
+// create a SSH Key
+$key = $client->ssh_keys->create($parameters);
+
+// rename a SSH Key
+$key = $client->ssh_keys->rename($keyId, $name);
+
+// remove a SSH Key
+$key = $client->ssh_keys->remove($keyId);
+```
+
 ## Usage with Symfony
 
 This library uses the [httpplug](http://httplug.io/) client library. The project provides a [Symfony bundle](http://docs.php-http.org/en/latest/integrations/symfony-bundle.html).
