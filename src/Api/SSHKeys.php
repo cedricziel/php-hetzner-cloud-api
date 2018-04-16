@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace CedricZiel\HetznerCloudAPI\Api;
 
 use Symfony\Component\OptionsResolver\OptionsResolver;

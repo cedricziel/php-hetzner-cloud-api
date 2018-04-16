@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace CedricZiel\HetznerCloudAPI\Api;
 
 use CedricZiel\HetznerCloudAPI\Client;
+use CedricZiel\HetznerCloudAPI\HttpClient\Message\QueryStringBuilder;
 use CedricZiel\HetznerCloudAPI\HttpClient\Message\ResponseMediator;
 use Http\Discovery\StreamFactoryDiscovery;
 use Http\Message\MultipartStream\MultipartStreamBuilder;
