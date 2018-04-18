@@ -15,7 +15,7 @@ class Servers extends AbstractApi
 
     public function show($serverId)
     {
-        return $this->get('servers/').$this->encodePath($serverId);
+        return $this->get('servers/'.$this->encodePath($serverId));
     }
 
     public function actions($serverId)
